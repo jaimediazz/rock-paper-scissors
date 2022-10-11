@@ -1,3 +1,17 @@
+span {
+    font-family: var(--barlow-font);
+    font-weight: 550;
+}
+
+#score-value {
+    color: var(--dark-text);
+    font-size: 50px;
+}
+
+#score-text {
+    color: var(--score-text);
+}
+
 /* LAYOUT */
 
 #app {
@@ -20,12 +34,12 @@ header {
     border-radius: 10px;
 }
 
-#score {
+#score-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
     border-radius: 5px;
-    padding-inline: 1rem;
+    padding-inline: 2rem;
 }

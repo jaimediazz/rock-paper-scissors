@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --barlow-font: 'Barlow', sans-serif;
+    --dark-text: hsl(229, 25%, 31%);
+    --score-text: hsl(229, 64%, 46%);
+}
