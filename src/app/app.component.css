@@ -88,9 +88,9 @@ footer {
 }
 
 footer button {
-    border: 2px solid hsl(217, 16%, 45%);
+    font-family: var(--barlow-font);
+    border: 2px solid #fff;
     border-radius: 5px;
     padding: .5rem 2rem;
     color: #fff;
-    font-weight: 550;
 }
