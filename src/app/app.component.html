@@ -1,9 +1,24 @@
-<div id="app">
-  <header>
+<div id="app" [ngClass]="showRulesModal ? 'grey-out-background' : ''">
+  <header id="main-header">
     <img src="../assets/logo.svg" alt="rock-paper-scissors">
     <div id="score-container">
       <span id="score-text">SCORE</span>
       <span id="score-value">12</span>
     </div>
   </header>
+  <app-game-board></app-game-board>
+  <div id="rules-modal" *ngIf="showRulesModal">
+    <header id="rules-header">
+      <span>RULES</span>
+      <button (click)="showRulesModal = false">
+        <img src="../assets/icon-close.svg" alt="close-rules">
+      </button>
+    </header>
+    <img src="../assets/image-rules.svg" alt="rules">
+  </div>
+  <footer>
+    <button (click)="showRulesModal = true" [disabled]="showRulesModal">
+      RULES
+    </button>
+  </footer>
 </div>

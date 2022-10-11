@@ -3,6 +3,11 @@ span {
     font-weight: 550;
 }
 
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
 #score-value {
     color: var(--dark-text);
     font-size: 50px;
@@ -10,6 +15,10 @@ span {
 
 #score-text {
     color: var(--score-text);
+}
+
+.grey-out-background {
+    filter: grayscale(25%);
 }
 
 /* LAYOUT */
@@ -24,7 +33,7 @@ span {
     background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
 }
 
-header {
+#main-header {
     display: flex;
     justify-content: space-between;
     width: 50%;
@@ -42,4 +51,46 @@ header {
     background-color: #fff;
     border-radius: 5px;
     padding-inline: 2rem;
+}
+
+#rules-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+#rules-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+#rules-modal img {
+    width: 90%;
+}
+
+#rules-modal button {
+    border: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+footer button {
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    color: #fff;
+    font-weight: 550;
 }
