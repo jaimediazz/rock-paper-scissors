@@ -9,4 +9,10 @@ export class AppComponent {
   showRulesModal: boolean = false;
   showGameResult: boolean = false;
   scoreValue: number = 0;
+  optionSelectedValue: string = '';
+
+  optionSelected(option: string) {
+    this.showGameResult = true;
+    this.optionSelectedValue = option;
+  }
 }

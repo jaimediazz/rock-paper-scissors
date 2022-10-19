@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-game-result',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-result.component.css']
 })
 export class GameResultComponent implements OnInit {
-
-  constructor() { }
-
+  @Input() playerOption: string = '';
+  
   ngOnInit(): void {
+    setTimeout(() => {
+      this.playerOption = 'prueba'
+    }, 1000)
   }
 
 }

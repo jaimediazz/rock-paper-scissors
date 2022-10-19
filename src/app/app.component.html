@@ -8,8 +8,10 @@
   </header>
   <app-game-board 
     *ngIf="!showGameResult"
-    (optionSelectedEvent)="showGameResult = true"></app-game-board>
-  <app-game-result *ngIf="showGameResult"></app-game-result>
+    (optionSelectedEvent)="optionSelected($event)"></app-game-board>
+  <app-game-result 
+    *ngIf="showGameResult"
+    [playerOption]="optionSelectedValue"></app-game-result>
   <div id="rules-modal" *ngIf="showRulesModal">
     <header id="rules-header">
       <span>RULES</span>
