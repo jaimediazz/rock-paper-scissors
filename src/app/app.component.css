@@ -94,3 +94,15 @@ footer button {
     padding: .5rem 2rem;
     color: #fff;
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 600px) {
+    #main-header {
+        width: 80%;
+    }
+
+    #main-header img {
+        width: 50%;
+    }
+}

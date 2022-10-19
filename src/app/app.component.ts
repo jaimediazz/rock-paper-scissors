@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showRulesModal = false;
-  
+  showRulesModal: boolean = false;
+  scoreValue: number = 0;
 }
