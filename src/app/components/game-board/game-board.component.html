@@ -1,16 +1,16 @@
 <div class="container">
     <img id="triangle" src="../../../assets/bg-triangle.svg" alt="triangle">
-    <div class="outer-container" id="paper-container">
+    <div class="outer-container" id="paper-container" (click)="optionSelected('paper')">
         <div class="inner-circle">
             <img src="../../../assets/icon-paper.svg" alt="paper">
         </div>
     </div>
-    <div class="outer-container" id="scissors-container">
+    <div class="outer-container" id="scissors-container" (click)="optionSelected('scissors')">
         <div class="inner-circle">
             <img src="../../../assets/icon-scissors.svg" alt="scissors">
         </div>
     </div>
-    <div class="outer-container" id="rock-container">
+    <div class="outer-container" id="rock-container" (click)="optionSelected('rock')">
         <div class="inner-circle">
             <img src="../../../assets/icon-rock.svg" alt="rock">
         </div>

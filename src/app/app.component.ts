@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showRulesModal: boolean = false;
+  showGameResult: boolean = false;
   scoreValue: number = 0;
 }
