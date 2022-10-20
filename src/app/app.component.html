@@ -8,6 +8,7 @@
   </header>
   <app-game-board 
     *ngIf="!showGameResult"
+    [rulesModalActive]="showRulesModal"
     (optionSelectedEvent)="optionSelected($event)"></app-game-board>
   <app-game-result 
     *ngIf="showGameResult"

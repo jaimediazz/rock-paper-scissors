@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-board',
@@ -6,9 +6,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./game-board.component.css']
 })
 export class GameBoardComponent {
+  @Input() rulesModalActive: boolean = false;
+
   @Output() optionSelectedEvent = new EventEmitter();
 
   optionSelected(option: string) {
-    this.optionSelectedEvent.emit(option);
+    if(!this.rulesModalActive) this.optionSelectedEvent.emit(option);
   }
 }
