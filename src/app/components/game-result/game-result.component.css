@@ -1,0 +1,89 @@
+h1 {
+    font-family: var(--barlow-font);
+    font-weight: 550;
+    color: #fff;
+    letter-spacing: .2rem;
+}
+
+h3 {
+    font-family: var(--barlow-font);
+    font-weight: 550;
+    color: #fff;
+    letter-spacing: .2rem;
+}
+
+button {
+    font-family: var(--barlow-font);
+    font-weight: 550;
+    background-color: #fff;
+    color: hsl(229, 25%, 31%);
+    padding: .7rem 3rem;
+    letter-spacing: .2rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: hsl(349, 71%, 52%);
+}
+
+/* LAYOUT */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.container section {
+    text-align: center;
+    /* width: 90%; */
+}
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.paper-container {
+    background-color: hsl(230, 89%, 62%);
+    box-shadow: inset 0 -5px 0 1px #00f;
+}
+
+.scissors-container {
+    background-color: hsl(39, 89%, 49%);
+    box-shadow: inset 0 -5px 0 1px orange;    
+}
+
+.rock-container {
+    background-color: hsl(349, 70%, 56%);
+    box-shadow: inset 0 -5px 0 1px hsl(349, 71%, 52%);    
+}
+
+.inner-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset 0 5px 0 1px #ccc;    
+}
+
+.inner-circle img  {
+    width: 40%;
+}
+
+.house-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: hsl(239, 48%, 17%);
+}
