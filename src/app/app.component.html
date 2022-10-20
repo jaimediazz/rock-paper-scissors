@@ -11,7 +11,8 @@
     (optionSelectedEvent)="optionSelected($event)"></app-game-board>
   <app-game-result 
     *ngIf="showGameResult"
-    [playerOption]="optionSelectedValue"></app-game-result>
+    [playerOption]="optionSelectedValue"
+    (playAgainEvent)="newGame($event)"></app-game-result>
   <div id="rules-modal" *ngIf="showRulesModal">
     <header id="rules-header">
       <span>RULES</span>

@@ -15,4 +15,9 @@ export class AppComponent {
     this.showGameResult = true;
     this.optionSelectedValue = option;
   }
+
+  newGame(result: string) {
+    this.showGameResult = false;
+    if(result === 'YOU WIN') this.scoreValue++;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-result',
@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GameResultComponent implements OnInit {
   @Input() playerOption: string = '';
+
+  @Output() playAgainEvent = new EventEmitter(); 
 
   houseOptions: Array<string> = ['paper','rock','scissors'];
   houseOption: string = '';
@@ -43,6 +45,10 @@ export class GameResultComponent implements OnInit {
     return this.houseOption === 'paper' ? '../../../assets/icon-paper.svg' 
       : this.houseOption === 'rock' ? '../../../assets/icon-rock.svg' : '../../../assets/icon-scissors.svg'
   }  
+
+  playAgain() {
+    this.playAgainEvent.emit(this.resultText);
+  }
 
   winner() {
     if(this.playerOption === this.houseOption) {

@@ -9,7 +9,7 @@
     </section>
     <section *ngIf="houseOption !== ''">
         <h1>{{ resultText }}</h1>
-        <button>PLAY AGAIN</button>
+        <button (click)="playAgain()">PLAY AGAIN</button>
     </section>
     <section>
         <h3>THE HOUSE PICKED</h3>
