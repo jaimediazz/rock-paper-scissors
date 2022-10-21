@@ -105,4 +105,13 @@ footer button {
     #main-header img {
         width: 50%;
     }
+
+    #rules-modal {
+        width: 70%;
+    }
+
+    footer {
+        right: 50%;
+        transform: translateX(50%);
+    }
 }
