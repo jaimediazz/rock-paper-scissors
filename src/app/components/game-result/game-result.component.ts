@@ -15,17 +15,17 @@ export class GameResultComponent implements OnInit {
   resultText: string = '';
   
   ngOnInit(): void {
-    setTimeout(() => {
-      this.houseOptionSelection()
-    }, 1000);
+    this.houseOptionSelection();
   }
 
   houseOptionSelection() {
     let randomNumber = Math.floor(Math.random()*3);
-
-    this.houseOption = this.houseOptions[randomNumber]; 
-    console.log("house picked: " + this.houseOption);
-    this.winner();
+    
+    setTimeout(() => {
+      this.houseOption = this.houseOptions[randomNumber]; 
+      console.log("house picked: " + this.houseOption);
+      this.winner();
+    }, 1000);
   }
 
   outerContainerClass() {

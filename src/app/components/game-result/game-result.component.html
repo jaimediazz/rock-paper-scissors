@@ -7,17 +7,19 @@
             </div>
         </div>        
     </section>
+    <section>
+        <h3>THE HOUSE PICKED</h3>
+        <ng-template #optionSelected>
+            <div class="outer-container" [ngClass]="outerHouseContainerClass()">
+                <div class="inner-circle">
+                    <img [src]="houseContainerImage()" alt="rock-paper-scissors">
+                </div>
+            </div>
+        </ng-template>
+        <div *ngIf="houseOption === ''; else optionSelected" class="unselected-container"></div>
+    </section>
     <section *ngIf="houseOption !== ''">
         <h1>{{ resultText }}</h1>
         <button (click)="playAgain()">PLAY AGAIN</button>
-    </section>
-    <section>
-        <h3>THE HOUSE PICKED</h3>
-        <div *ngIf="houseOption !== ''" class="outer-container" [ngClass]="outerHouseContainerClass()">
-            <div class="inner-circle">
-                <img [src]="houseContainerImage()" alt="rock-paper-scissors">
-            </div>
-        </div>        
-        <div *ngIf="houseOption === ''" class="house-container"></div>
     </section>
 </div>
