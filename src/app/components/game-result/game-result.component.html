@@ -20,6 +20,6 @@
     </section>
     <section *ngIf="houseOption !== ''">
         <h1>{{ resultText }}</h1>
-        <button (click)="playAgain()">PLAY AGAIN</button>
+        <button (click)="playAgain()" [disabled]="rulesModalActive">PLAY AGAIN</button>
     </section>
 </div>

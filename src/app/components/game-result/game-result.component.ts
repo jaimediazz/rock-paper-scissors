@@ -7,6 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class GameResultComponent implements OnInit {
   @Input() playerOption: string = '';
+  @Input() rulesModalActive: boolean = false;
 
   @Output() playAgainEvent = new EventEmitter(); 
 

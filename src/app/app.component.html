@@ -13,6 +13,7 @@
   <app-game-result 
     *ngIf="showGameResult"
     [playerOption]="optionSelectedValue"
+    [rulesModalActive]="showRulesModal"
     (playAgainEvent)="newGame($event)"></app-game-result>
   <div id="rules-modal" *ngIf="showRulesModal">
     <header id="rules-header">
